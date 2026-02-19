@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          persist-credentials: false  # important for force pushing
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -31,6 +33,6 @@ jobs:
           publish_dir: ./build
           user_name: "github-actions[bot]"
           user_email: "github-actions[bot]@users.noreply.github.com"
-          force_orphan: true    # ✅ creates gh-pages branch if it doesn't exist
-          allow_empty_commit: true  # ✅ avoids git errors if nothing changed
-          commit_message: "Deploy SvelteKit app to GitHub Pages"
+          force_orphan: true          # create gh-pages branch if it doesn't exist
+          allow_empty_commit: true    # avoid errors if build didn't change
+          commit_message: "Deploy SvelteKit app"
