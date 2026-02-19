@@ -31,4 +31,6 @@ jobs:
           publish_dir: ./build
           user_name: "github-actions[bot]"
           user_email: "github-actions[bot]@users.noreply.github.com"
-          force_orphan: true
+          force_orphan: true    # ✅ creates gh-pages branch if it doesn't exist
+          allow_empty_commit: true  # ✅ avoids git errors if nothing changed
+          commit_message: "Deploy SvelteKit app to GitHub Pages"
