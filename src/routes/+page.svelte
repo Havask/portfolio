@@ -3,11 +3,12 @@
   import Section from '$lib/Section.svelte';
   import Card from '$lib/Card.svelte';
   import Footer from '$lib/Footer.svelte';
+  import { base } from '$app/paths';
 
   const projects = [
-    { title: "CV", description: "View my professional CV.", link: "/cv" },
-    { title: "Courses & Projects", description: "See courses I've taken and my projects.", link: "/projects" },
-    { title: "Socials", description: "Links to GitHub, LinkedIn, etc.", link: "/socials" },
+    { title: "CV", description: "View my professional CV.", link: `${base}/cv` },
+    { title: "Courses & Projects", description: "See courses I've taken and my projects.", link: `${base}/projects` },
+    { title: "Socials", description: "Links to GitHub, LinkedIn, etc.", link: `${base}/socials` },
   ];
 </script>
 
@@ -23,7 +24,7 @@
       <div class="flex flex-col md:flex-row items-center md:items-center gap-8 md:gap-12">
         <!-- Picture -->
         <img
-          src="/profile.jpeg"
+          src="{base}/profile.jpeg"
           alt="Håvard Skjærstein"
           class="w-52 h-52 md:w-64 md:h-64 object-cover rounded-full shadow-xl border-4 border-blue-600"
         />
@@ -31,7 +32,7 @@
         <!-- Text -->
         <div class="md:flex-1">
           <p class="text-gray-800 leading-relaxed text-lg md:text-xl">
-            I'm Håvard, a Master’s student in Computer Science at UiT. I develop web and mobile applications, work with AI in healthcare, and build systems during internships and personal projects. Curious, structured, and collaborative, I enjoy creating meaningful software and exploring new technologies.
+            I'm Håvard, a Master's student in Computer Science at UiT. I develop web and mobile applications, work with AI in healthcare, and build systems during internships and personal projects. Curious, structured, and collaborative, I enjoy creating meaningful software and exploring new technologies.
           </p>
         </div>
       </div>
