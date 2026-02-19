@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { base } from '$app/paths';
   export let title: string;
 </script>
 
@@ -10,10 +11,10 @@
     <!-- Navigation -->
     <nav class="mt-4 sm:mt-0">
       <ul class="flex space-x-6 justify-center sm:justify-end">
-        <li><a href="/" class="hover:underline">Home</a></li>
-        <li><a href="/cv" class="hover:underline">CV</a></li>
-        <li><a href="/projects" class="hover:underline">Projects</a></li>
-        <li><a href="/socials" class="hover:underline">Socials</a></li>
+        <li><a href="{base}/" class="hover:underline">Home</a></li>
+        <li><a href="{base}/cv" class="hover:underline">CV</a></li>
+        <li><a href="{base}/projects" class="hover:underline">Projects</a></li>
+        <li><a href="{base}/socials" class="hover:underline">Socials</a></li>
       </ul>
     </nav>
   </div>
