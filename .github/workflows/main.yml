@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write  # 👈 explicitly grant write access
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -12,8 +15,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          persist-credentials: false  # important for force pushing
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -31,8 +32,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
-          user_name: "github-actions[bot]"
-          user_email: "github-actions[bot]@users.noreply.github.com"
-          force_orphan: true          # create gh-pages branch if it doesn't exist
-          allow_empty_commit: true    # avoid errors if build didn't change
-          commit_message: "Deploy SvelteKit app"
+          force_orphan: true
