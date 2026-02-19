@@ -32,8 +32,7 @@
         <!-- Text -->
         <div class="md:flex-1">
           <p class="text-gray-800 leading-relaxed text-lg md:text-xl">
-            I'm Håvard, a Master's student in Computer Science at UiT. I develop web and mobile applications, work with AI in healthcare, and build systems during internships and personal projects. Curious, structured, and collaborative, I enjoy creating meaningful software and exploring new technologies.
-          </p>
+I'm Håvard, a Computer Science Master's student at UiT. I build web and mobile apps, explore AI in healthcare, and enjoy turning ideas into working software.          </p>
         </div>
       </div>
     </Section>
